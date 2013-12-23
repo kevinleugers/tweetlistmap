@@ -1,6 +1,7 @@
 Home<br />
 <% if current_user %>
-  Hello, <%= current_user.username %>
+  Hello, <%= current_user.username %><br />
+  <%= render 'layouts/get_tweets' %>
 <% else %>
   <div id="user_nav">
     <%= link_to "Sign in with Twitter", "/auth/twitter"%>
